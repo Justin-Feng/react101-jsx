@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+
+
 import './App.css';
 
 function App() {
+  const commentsHTML = [(<li>Thank you</li>), (<li>Awesome</li>), (<li>I love it</li>), "+100", (<li>+100</li>)];
+
+  // If we want to use HTML elements in jsx, use parenthesis ()
+  // If we want to use JavaScript variables in HTML, use cural parenthesis {}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ul className="comments">
+      {commentsHTML[0]}
+      {commentsHTML[1]}
+      <li>{commentsHTML[2]}</li>
+      {commentsHTML[3]}
+      <li>{commentsHTML[4]}</li>
+    </ul>
+  )
 }
 
 export default App;
